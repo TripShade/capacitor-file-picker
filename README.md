@@ -81,6 +81,7 @@ const requestPermissions = async () => {
 
 * [`checkPermissions()`](#checkpermissions)
 * [`convertHeicToJpeg(...)`](#convertheictojpeg)
+* [`convertMovToMp4(...)`](#convertmovtomp4)
 * [`pickFiles(...)`](#pickfiles)
 * [`pickImages(...)`](#pickimages)
 * [`pickMedia(...)`](#pickmedia)
@@ -130,6 +131,26 @@ Only available on iOS.
 **Returns:** <code>Promise&lt;<a href="#convertheictojpegresult">ConvertHeicToJpegResult</a>&gt;</code>
 
 **Since:** 0.6.0
+
+--------------------
+
+### convertMovToMp4(...)
+
+```typescript
+convertMovToMp4(options: ConvertMovToMp4Options) => Promise<ConvertMovToMp4Result>
+```
+
+Convert a QuickTime Mov video to MP4 H.264.
+
+Only available on iOS.
+
+| Param         | Type                                                                          |
+| ------------- | ----------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#convertmovtomp4options">ConvertMovToMp4Options</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#convertmovtomp4result">ConvertMovToMp4Result</a>&gt;</code>
+
+**Since:** 6.1.0 patched
 
 --------------------
 
@@ -299,6 +320,19 @@ Remove all listeners for this plugin.
 | Prop       | Type                | Description                 | Since |
 | ---------- | ------------------- | --------------------------- | ----- |
 | **`path`** | <code>string</code> | The path of the HEIC image. | 0.6.0 |
+
+#### ConvertMovToMp4Result
+
+| Prop       | Type                | Description                           | Since |
+| ---------- | ------------------- | ------------------------------------- | ----- |
+| **`path`** | <code>string</code> | The path of the converted Mp4 video. | 6.1.0 patched |
+
+
+#### ConvertMovToMp4Options
+
+| Prop       | Type                | Description                 | Since |
+| ---------- | ------------------- | --------------------------- | ----- |
+| **`path`** | <code>string</code> | The path of the QuickTime Mov video. | 6.1.0 patched |
 
 
 #### PickFilesResult
